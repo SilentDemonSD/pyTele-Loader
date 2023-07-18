@@ -1,12 +1,18 @@
-<div align=center>
+<div align="center">
 
 [![](https://graph.org/file/97565a913c0133da1db6c.png)](#)
-[Deploy Guide](https://github.com/SilentDemonSD/HK-Loader/edit/main/README.md#heroku-cli-guide) | [Contact Me](https://t.me/SilentDemonSD)
+
+[_CLI Deploy Guide_](https://github.com/SilentDemonSD/HK-Loader/tree/main#heroku-cli-guide)  |  [_Contact Me_](https://t.me/SilentDemonSD)
 
 </div>
 
 ## ***HK-Loader & Updater***
-A Simple **Shell Script** to make your Repo Deployable to Heroku.com via CLI _(Recommended)_ & Auto Updates on Restart with your Repository
+
+<div align="center">
+  
+A Simple **Shell Script** to make your Repo Deployable to Heroku.com via CLI _(Recommended)_ & Auto Update and Fetch your Repo Updates on Restart with your Repository URL.
+
+</div>
 
 ## ***Heroku CLI Guide***
 
@@ -77,5 +83,10 @@ git push heroku main -f
   run:
     web: chmod +x hk_deploy.sh && ./hk_deploy.sh
   ```
+  - Also Run a extra Command before Deploy
+    ```shell
+    heroku stack:set container -a APP_NAME
+    ```
+    **Available Stacks :** `container` (Dockerfile), `heroku-22` (Default) & `heroku-20` (python-3.8.16 Version Usage)
 - Default process type is `web`, if you use other types, replace `web` from `heroku.yml` and `Procfile`
 
