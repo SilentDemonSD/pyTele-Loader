@@ -11,6 +11,10 @@ if [ -d ".git" ]; then
   rm -rf .git
 fi
 
+req_txt=1
+if [ ! -f ".req_installed" ]; then
+  req_txt=0
+
 git init -q
 git config --global user.email drxxstrange@gmail.com
 git config --global user.name SilentDemonSD
@@ -18,10 +22,11 @@ git remote add origin $repo_url
 git fetch origin -q
 git reset --hard origin/$repo_branch -q
 
-if [ ! -f ".req_installed" ]; then
+if [ $req_txt -eq 1 ]; then
   pip install -r requirements.txt
-  touch .req_installed
 fi
+
+touch .req_installed
 
 start_cmd=$START_CMD
 if [ ! -z "$start_cmd" ]; then
