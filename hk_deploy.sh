@@ -1,30 +1,33 @@
- #!/bin/bash
-
+#!/bin/bash
 repo_url=$REPO_URL
-if [ -z "$repo_url" ]; then
-  echo "REPO_URL environment variable is not set. Set and Restart. Exiting ..."
+repo_branch=$REPO_BRANCH
+
+if [ -z "$repo_url" ] || [ -z "$repo_branch" ]; then
+  echo "REPO_URL or REPO_BRANCH environment variable is not set. Set it and Restart..."
   exit 1
 fi
 
-git clone "$repo_url" hk_dep
-cd hk_dep
-pip install -r requirements.txt
+if [ -d ".git" ]; then
+  rm -rf .git
+fi
 
-has_docker=$HAS_DOCKER
-if [ "$has_docker" = "true" ]; then
-  if [ -f "Dockerfile" ]; then
-    docker build -t hk_load .
-    docker run -it hk_load
-  else
-    echo "Dockerfile does not exist. Make a Dockerfile and Restart."
-    exit 1
-  fi
-else
-  start_cmd=$START_CMD
-  if [ ! -z "$start_cmd" ]; then
-    eval "$start_cmd"
-  else
-    python main.py
+git init -q
+git config --global user.email drxxstrange@gmail.com
+git config --global user.name SilentDemonSD
+git remote add origin $repo_url
+git fetch origin -q
+git reset --hard origin/$repo_branch -q
+
+if [ ! -f ".req_installed" ]; then
+  pip install -r requirements.txt
+  touch .req_installed
+fi
+
+start_cmd=$START_CMD
+if [ ! -z "$start_cmd" ]; then
   echo "HK-Loader : https://github.com/SilentDemonSD/HK-Loader | Thanks for Using, Now set Other Vars from Settings in Heroku."
-  fi
+  eval "$start_cmd"
+else
+  echo "START_CMD not specified. Exiting Now ..."
+  exit 1
 fi
