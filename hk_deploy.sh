@@ -18,10 +18,7 @@ git remote add origin $repo_url
 git fetch origin -q
 git reset --hard origin/$repo_branch -q
 
-req_txt=$(echo "$UPDATE_PKGS" | tr '[:upper:]' '[:lower:]')
-if [ "$req_txt" == "true" ]; then
-  pip install -r requirements.txt
-fi
+pip install -r requirements.txt --quiet
 
 start_cmd=$START_CMD
 if [ -z "$start_cmd" ]; then
