@@ -61,7 +61,7 @@ heroku git:remote -a APP_NAME
 **Step 6 :** Setup Config Variables for the script to run.
 
 ```shell
-heroku config:set REPO_URL=https://github.com/user/repo REPO_BRANCH=main START_CMD="python -m bot" UPDATE_PKGS=true
+heroku config:set REPO_URL=https://github.com/user/repo REPO_BRANCH=main START_CMD="python -m bot"
 ```
 
 **Step 7 :** Now push to Heroku via git forcefully to build.
@@ -72,13 +72,15 @@ git push heroku main -f
 
 **All Heroku CLI Commands :** [Click Here](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-config-set)
 
+---
 
 ## Config SetUp
 - `REPO_URL` - Deploy Repository URL, add Private Token if Repo is Private
 - `REPO_BRANCH` - Repo Branch, you want to deploy with your REPO_URL.
 - `START_CMD` - Trigger Command for your Bot to Run.
   > Examples : `python -m bot` ( `-m` is for inside Dir startup) or `python main.py` or `bash start.sh`
-- `UPDATE_PKGS` - Installs `requirements.txt` file packages via heroku `pip`. Must set this `True` on First Deploy, then turn Off by setting False.
+
+---
 
 ## ***Important Notes:***
 - Repo made for Non-Docker Repos but can be customized for Docker Repos _(Read Ahead)_
