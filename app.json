@@ -10,13 +10,13 @@
   "repository": "https://github.com/SilentDemonSD/HK-Loader",
   "env": {
     "REPO_URL": {
-      "description": "Deploy Repository URL, add Private Token if Repo is Private",
+      "description": "Deploy Repository URL, add Private Token if Repo is Private"
     },
     "REPO_BRANCH": {
-      "description": "Repo Branch, you want to deploy with your REPO_URL.",
+      "description": "Repo Branch, you want to deploy with your REPO_URL."
     },
     "START_CMD": {
-      "description": "Trigger Command for your Bot to Run.",
+      "description": "Trigger Command for your Bot to Run."
     }
   },
   "formation": {
