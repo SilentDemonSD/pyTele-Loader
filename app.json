@@ -1,0 +1,31 @@
+{
+  "name": "HK-Loader",
+  "description": "A Universal Plugin to Deploy a Non-Supported Heroku Repo without any hassle. ",
+  "keywords": [
+    "plugin",
+    "loader",
+    "heroku"
+  ],
+  "website": "https://t.me/FXTorrentz",
+  "repository": "https://github.com/SilentDemonSD/HK-Loader",
+  "env": {
+    "REPO_URL": {
+      "description": "Deploy Repository URL, add Private Token if Repo is Private",
+      "required": true
+    },
+    "REPO_BRANCH": {
+      "description": "Repo Branch, you want to deploy with your REPO_URL.",
+      "required": true
+    },
+    "START_CMD": {
+      "description": "Trigger Command for your Bot to Run.",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+}
