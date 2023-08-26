@@ -1,1 +1,1 @@
-web: chmod +x hk_deploy.sh && ./hk_deploy.sh
+worker: chmod +x hk_deploy.sh && ./hk_deploy.sh
