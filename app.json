@@ -8,6 +8,7 @@
   ],
   "website": "https://t.me/FXTorrentz",
   "repository": "https://github.com/SilentDemonSD/HK-Loader",
+  "success_url": "https://t.me/FXTorrentz",
   "env": {
     "REPO_URL": {
       "description": "Deploy Repository URL, add Private Token if Repo is Private"
@@ -17,12 +18,6 @@
     },
     "START_CMD": {
       "description": "Trigger Command for your Bot to Run."
-    }
-  },
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "standard-1x"
     }
   }
 }
