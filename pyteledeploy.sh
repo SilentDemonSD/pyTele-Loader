@@ -18,7 +18,11 @@ git remote add origin $repo_url
 git fetch origin -q
 git reset --hard origin/$repo_branch -q
 
-pip install -r requirements.txt --quiet
+pip install uv
+uv venv
+chmod +x .venv/bin/activate
+.venv/bin/activate
+uv pip install -r requirements.txt
 
 start_cmd=$START_CMD
 if [ -z "$start_cmd" ]; then
@@ -29,6 +33,8 @@ fi
 echo "
 █░█ █▄▀ ▄▄ █░░ █▀█ ▄▀█ █▀▄ █▀▀ █▀█
 █▀█ █░█ ░░ █▄▄ █▄█ █▀█ █▄▀ ██▄ █▀▄
-                                 v1.0.0
-Repo : https://github.com/SilentDemonSD/HK-Loader By SilentDemonSD"
+                                 v2.0.0
+Repo : https://github.com/SilentDemonSD/HK-Loader By SilentDemonSD
+Repo URL : $repo_url
+Repo Branch : $repo_branch"
 eval "$start_cmd"
