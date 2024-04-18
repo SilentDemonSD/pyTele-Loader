@@ -44,6 +44,16 @@ A Simple **.sh & .py Script** with python web to make your Repo Deployable to He
 
 </div>
 
+---
+
+## ***Render One-Click Deploy***
+
+<div align="center">
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/SilentDemonSD/pyTele-Loader) 
+
+</div>
+
 > [!NOTE]
 > _More Services will be Added soon. If want to suggest supporting sites, open a Issue to Support that Site !_
 

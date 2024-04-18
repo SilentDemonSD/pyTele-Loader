@@ -1,0 +1,19 @@
+services:
+  - type: web
+    runtime: python
+    name: pytele-loader
+    repo: https://github.com/SilentDemonSD/pyTele-Loader
+    branch: main
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b :$PORT app:app & chmod +x pyteledeploy.sh && ./pyteledeploy.sh & python3 alive.py
+    autoDeploy: false
+    maxShutdownDelaySeconds: 120
+    envVars:
+      - key: REPO_URL
+        sync: false
+      - key: REPO_BRANCH
+        sync: false
+      - key: START_CMD
+        sync: false
