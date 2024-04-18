@@ -1,8 +1,6 @@
 #!/bin/bash
-repo_url=$REPO_URL
-repo_branch=$REPO_BRANCH
 
-if [ -z "$repo_url" ] || [ -z "$repo_branch" ]; then
+if [ -z "$REPO_URL" ] || [ -z "$REPO_BRANCH" ]; then
   echo "REPO_URL or REPO_BRANCH environment variable is not set. Exiting ..."
   exit 1
 fi
@@ -14,18 +12,17 @@ fi
 git init -q
 git config --global user.email drxxstrange@gmail.com
 git config --global user.name SilentDemonSD
-git remote add origin $repo_url
+git remote add origin $REPO_URL
 git fetch origin -q
-git reset --hard origin/$repo_branch -q
+git reset --hard origin/$REPO_BRANCH -q
 
-pip install uv
+pip install uv --quiet
 uv venv
 chmod +x .venv/bin/activate
 .venv/bin/activate
-uv pip install -r requirements.txt
+uv pip install --no-cache-dir --upgrade --force-reinstall -r requirements.txt
 
-start_cmd=$START_CMD
-if [ -z "$start_cmd" ]; then
+if [ -z "$START_CMD" ]; then
   echo "START_CMD not specified. Exiting Now ..."
   exit 1
 fi
@@ -35,6 +32,7 @@ echo "
 █▀█ █░█ ░░ █▄▄ █▄█ █▀█ █▄▀ ██▄ █▀▄
                                  v2.0.0
 Repo : https://github.com/SilentDemonSD/HK-Loader By SilentDemonSD
-Repo URL : $repo_url
-Repo Branch : $repo_branch"
-eval "$start_cmd"
+Repo URL : $REPO_URL
+Repo Branch : $REPO_BRANCH"
+
+eval "$START_CMD"
