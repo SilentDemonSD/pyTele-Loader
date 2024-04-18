@@ -13,5 +13,5 @@ if PORT is not None:
             sleep(600)
         except Exception as e:
             logerror(f"alive.py: {e}")
-            sleep(2)
+            sleep(600)
             continue

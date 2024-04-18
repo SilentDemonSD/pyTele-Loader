@@ -1,6 +1,6 @@
 {
     "name": "pyTele-Loader",
-    "stack": "scalingo-18",
+    "stack": "scalingo-22",
     "description": "A Universal Plugin to Deploy a Non-Supported Repos without any hassle",
     "logo": "https://scalingo.com/logo.svg",
     "repository": "https://github.com/SilentDemonSD/pyTele-Loader",
@@ -17,6 +17,10 @@
         "START_CMD": {
             "description": "Trigger Command for your Bot to Run.",
             "value": ""
+        },
+        "BASE_URL": {
+            "description": "Base URL to ping server every 10mins",
+            "value": "https://APP_NAME.osc-fr1.scalingo.io"
         }
     },
     "formation": {
