@@ -16,3 +16,5 @@ services:
         sync: false
       - key: START_CMD
         sync: false
+      - key: PORT
+        value: 80
