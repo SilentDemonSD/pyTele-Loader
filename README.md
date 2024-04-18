@@ -1,16 +1,18 @@
-<p align="center">
+<div align="center">
     <a href="https://github.com/SilentDemonSD/pyTele-Loader">
         <kbd>
-            <img width="250" src="https://te.legra.ph/file/c7981fc6bb3f65f42ba38.jpg" alt="Tele-Loader Logo">
+            <img width="200" src="https://te.legra.ph/file/c7981fc6bb3f65f42ba38.jpg" alt="Tele-Loader Logo">
         </kbd>
     </a>
-</p>
-
-[_CLI Deploy Guide_](#heroku-cli-guide)  |  [_Contact Me_](https://t.me/SilentDemonSD)
+    <br>
+    
+[_Updates_](https://t.me/FZXParadox) | [_Heroku CLI_](#-heroku-cli-guide-optional)  |  [_Contact Me_](https://t.me/MysterySD)
+    
+</div> 
 
 ---
 
-## ***pyTele-Loader & Updater***
+## 🎛 ***pyTele-Loader & Updater***
 
 <div align="center">
   
@@ -18,28 +20,45 @@ A Simple **.sh & .py Script** with python web to make your Repo Deployable to He
 
 </div>
 
+> [!WARNING]
+> _This Repo Only tends to Make Deployment as easy as Possible, it doesn't make Banned Repo Unban or vice versa._
+
 ---
 
 ## ***Heroku One-Click Deploy***
 
+<div align="center">
+    
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](http://heroku.com/deploy?template=https://github.com/SilentDemonSD/pyTele-Loader)
 
-## ***Koyeb One-Click Deploy***
-
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&env[REPO_URL]=%20&env[REPO_BRANCH]=%20&env[START_CMD]=%20&region=fra&region=par&repository=github.com/SilentDemonSD/pyTele-Loader&branch=main)
+</div
 
 ---
 
-## ***Heroku CLI Guide (Optional)*** 
+## ***Koyeb One-Click Deploy***
+
+<div align="center">
+
+
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&env[REPO_URL]=%20&env[REPO_BRANCH]=%20&env[START_CMD]=%20&env[BASE_URL]=%20&region=fra&region=par&repository=github.com/SilentDemonSD/pyTele-Loader&branch=main)
+
+</div>
+
+> [!NOTE]
+> _More Services will be Added soon. If want to suggest supporting sites, open a Issue to Support that Site !_
+
+---
+
+## 📑 ***Heroku CLI Guide (Optional)*** 
 
 <details>
-    <summary>Click Here to See Complete Guide</summary>
+    <summary><i>Learn more</i><sup><kbd>Click Here to Expand</kbd></sup></summary>
 
 **Step 1 :** Git clone this Repo and change directory
-> Make sure git is Installed in your system or quick run `apt-get install git pip curl -y`
+> Make sure git is Installed in your system or quick run `apt-get install git curl -y`
 
 ```shell
-git clone https://github.com/SilentDemonSD/HK-Loader && cd HK-Loader
+git clone https://github.com/SilentDemonSD/pyTele-Loader && cd pyTele-Loader
 ```
 
 **Step 2 :** Now Install Heroku in your Sytem or checkout Official Heroku Deploy Docs, or Download via `apt-get` or `npm`
@@ -52,7 +71,7 @@ curl https://cli-assets.heroku.com/install.sh | sh
 **Step 3 :** Login into Heroku and Log In CLI via Browser 
 
 ```shell
-heroku login
+heroku login 
 ```
 
 **Step 4 :** Create Heroku App and specify region with App Name
@@ -66,6 +85,7 @@ heroku create --region us APP_NAME
 - `APP_NAME` should be replaced with your unique app name _(Optional)_. If not given it generates a random name.
 - `--stack container` for setting stack to container for Dockerfile.
 - `--buildpack heroku/python` for using build slug for repo deploy and build.
+- `--team TEAM_NAME` for creating App in Teams
 
 **Step 5 :** Set Local git remote for Heroku.
 
@@ -96,13 +116,17 @@ git push heroku main -f
 - `REPO_BRANCH` - Repo Branch, you want to deploy with your REPO_URL.
 - `START_CMD` - Trigger Command for your Bot to Run.
   > Examples : `python -m bot` ( `-m` is for inside Dir startup) or `python main.py` or `bash start.sh`
+- `BASE_URL` - Default Web service, Add Base URL to ping server every 10mins
+- `PORT` _(Optional)_ - Not necessarily needed until you specify a different port.
 
 ---
 
 ## ***Important Notes:***
 - Repo made for Non-Docker Repos but can be customized for Docker Repos _(Read Ahead)_
-- If your Repo Uses additional Docker packages or Images, Add `Dockerfile` _(Must Remove Run cmd)_ here and add `heroku.yml` file with content as:
-  ```yml
+
+**Heroku Guide :**
+- If your Repo Uses additional Docker packages or Images, Add `Dockerfile` in root directory and also add `heroku.yml` file with content as:
+  ```yaml
   build:
     docker:
       web: Dockerfile
@@ -130,4 +154,4 @@ git push heroku main -f
 
 ## ***References***
 - _Concept & Made by SilentDemonSD_
-- _Helped via git Docs & AriaAI_
+- _Helped via git docs & AI_
