@@ -18,9 +18,8 @@ git reset --hard origin/$REPO_BRANCH -q
 
 pip install uv --quiet
 uv venv
-chmod +x .venv/bin/activate
-.venv/bin/activate
-uv pip install --no-cache-dir --upgrade --force-reinstall -r requirements.txt
+. .venv/bin/activate
+uv pip install --system --no-cache-dir -r requirements.txt
 
 if [ -z "$START_CMD" ]; then
   echo "START_CMD not specified. Exiting Now ..."
