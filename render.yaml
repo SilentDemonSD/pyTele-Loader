@@ -9,7 +9,6 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn -b :$PORT app:app & chmod +x pyteledeploy.sh && ./pyteledeploy.sh & python3 alive.py
     autoDeploy: false
-    maxShutdownDelaySeconds: 120
     envVars:
       - key: REPO_URL
         sync: false
