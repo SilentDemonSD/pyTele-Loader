@@ -1,0 +1,28 @@
+{
+    "name": "pyTele-Loader",
+    "stack": "scalingo-18",
+    "description": "A Universal Plugin to Deploy a Non-Supported Repos without any hassle",
+    "logo": "https://scalingo.com/logo.svg",
+    "repository": "https://github.com/SilentDemonSD/pyTele-Loader",
+    "website": "https://telegram.me/FZXParadox",
+    "env": {
+        "REPO_URL": {
+            "description": "Deploy Repository URL, add Private Token if Repo is Private",
+            "value": ""
+        },
+        "REPO_BRANCH": {
+            "description": "Repo Branch, you want to deploy with your REPO_URL.",
+            "value": ""
+        },
+        "START_CMD": {
+            "description": "Trigger Command for your Bot to Run.",
+            "value": ""
+        }
+    },
+    "formation": {
+        "web": {
+            "amount": 1,
+            "size": "S"
+        }
+    }
+}

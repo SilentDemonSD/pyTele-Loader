@@ -50,9 +50,24 @@ A Simple **.sh & .py Script** with python web to make your Repo Deployable to He
 
 <div align="center">
 
+> [!CAUTION]
+> In Development, weird Issues popping up...
+
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/SilentDemonSD/pyTele-Loader) 
 
 </div>
+
+---
+
+## ***Scalingo One-Click Deploy***
+
+<div align="center">
+
+[![Deploy on Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://dashboard.scalingo.com/create/app?source=https://github.com/SilentDemonSD/pyTele-Loader#main)
+
+</div>
+
+---
 
 > [!NOTE]
 > _More Services will be Added soon. If want to suggest supporting sites, open a Issue to Support that Site !_
