@@ -1,14 +1,15 @@
 {
-  "name": "HK-Loader",
+  "name": "pyTele-Loader",
   "description": "A Universal Plugin to Deploy a Non-Supported Heroku Repo without any hassle. ",
   "keywords": [
     "plugin",
     "loader",
-    "heroku"
+    "heroku",
+    "python"
   ],
   "website": "https://t.me/FZXParadox",
-  "repository": "https://github.com/SilentDemonSD/HK-Loader",
-  "success_url": "https://t.me/FXTorrentz",
+  "repository": "https://github.com/SilentDemonSD/pyTele-Loader",
+  "success_url": "https://t.me/FZXParadox",
   "env": {
     "REPO_URL": {
       "description": "Deploy Repository URL, add Private Token if Repo is Private"

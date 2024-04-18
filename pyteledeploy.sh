@@ -16,10 +16,10 @@ git remote add origin $REPO_URL
 git fetch origin -q
 git reset --hard origin/$REPO_BRANCH -q
 
-pip install uv --quiet
+pip install -q uv
 uv venv
 . .venv/bin/activate
-uv pip install --system --no-cache-dir -r requirements.txt
+uv pip install --system --no-cache-dir -q -r requirements.txt
 
 if [ -z "$START_CMD" ]; then
   echo "START_CMD not specified. Exiting Now ..."
@@ -27,9 +27,9 @@ if [ -z "$START_CMD" ]; then
 fi
 
 echo "
-█░█ █▄▀ ▄▄ █░░ █▀█ ▄▀█ █▀▄ █▀▀ █▀█
-█▀█ █░█ ░░ █▄▄ █▄█ █▀█ █▄▀ ██▄ █▀▄
-                                 v2.0.0
+░▀█▀▒██▀░█▒░▒██▀░▒░░█▒░░▄▀▄▒▄▀▄░█▀▄▒██▀▒█▀▄
+░▒█▒░█▄▄▒█▄▄░█▄▄░▀▀▒█▄▄░▀▄▀░█▀█▒█▄▀░█▄▄░█▀▄
+                                     v2.0.0
 Repo : https://github.com/SilentDemonSD/HK-Loader By SilentDemonSD
 Repo URL : $REPO_URL
 Repo Branch : $REPO_BRANCH"

@@ -1,24 +1,39 @@
-<div align="center">
-
-[![](https://graph.org/file/97565a913c0133da1db6c.png)](#)
+<p align="center">
+    <a href="https://github.com/SilentDemonSD/pyTele-Loader">
+        <kbd>
+            <img width="250" src="https://te.legra.ph/file/c7981fc6bb3f65f42ba38.jpg" alt="Tele-Loader Logo">
+        </kbd>
+    </a>
+</p>
 
 [_CLI Deploy Guide_](#heroku-cli-guide)  |  [_Contact Me_](https://t.me/SilentDemonSD)
 
-</div>
-
 ---
 
-## ***HK-Loader & Updater***
+## ***pyTele-Loader & Updater***
 
 <div align="center">
   
-A Simple **Shell Script** to make your Repo Deployable to Heroku.com (via CLI) & Auto Update and Fetch your Repo Updates / Commits on Restart with your Repository URL.
+A Simple **.sh & .py Script** with python web to make your Repo Deployable to Heroku.com, Koyeb, Render, Scalingo, etc.. & Auto Update and Fetch your Repo Updates / Commits on Restart with your Repository URL.
 
 </div>
 
 ---
 
-## ***Heroku CLI Guide***
+## ***Heroku One-Click Deploy***
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](http://heroku.com/deploy?template=https://github.com/SilentDemonSD/pyTele-Loader)
+
+## ***Koyeb One-Click Deploy***
+
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&env[REPO_URL]=%20&env[REPO_BRANCH]=%20&env[START_CMD]=%20&region=fra&region=par&repository=github.com/SilentDemonSD/pyTele-Loader&branch=main)
+
+---
+
+## ***Heroku CLI Guide (Optional)*** 
+
+<details>
+    <summary>Click Here to See Complete Guide</summary>
 
 **Step 1 :** Git clone this Repo and change directory
 > Make sure git is Installed in your system or quick run `apt-get install git pip curl -y`
@@ -71,6 +86,8 @@ git push heroku main -f
 ```
 
 **All Heroku CLI Commands :** [Click Here](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-config-set)
+
+</details>
 
 ---
 
