@@ -48,9 +48,6 @@ A Simple **.sh & .py Script** with python web to make your Repo Deployable to He
 
 ## ***Render One-Click Deploy***
 
-> [!CAUTION]
-> In Development !
-
 <div align="center">
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/SilentDemonSD/pyTele-Loader) 
@@ -62,7 +59,7 @@ A Simple **.sh & .py Script** with python web to make your Repo Deployable to He
 ## ***Scalingo One-Click Deploy***
 
 > [!CAUTION]
-> In Development !
+> Broken, `python3` not found !
 
 <div align="center">
 
