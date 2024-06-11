@@ -29,7 +29,7 @@ A Simple **.sh & .py Script** with python web to make your Repo Deployable to He
 
 <div align="center">
     
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](http://heroku.com/deploy?template=https://github.com/SilentDemonSD/pyTele-Loader)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new-app?template=https://github.com/Salxchange/pyTele-Loader)
 
 </div
 
