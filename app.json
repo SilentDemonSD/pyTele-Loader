@@ -12,13 +12,24 @@
   "success_url": "https://t.me/FZXParadox",
   "env": {
     "REPO_URL": {
-      "description": "Deploy Repository URL, add Private Token if Repo is Private"
+      "description": "Deploy Repository URL, add Private Token if Repo is Private",
+      "value": ""
     },
     "REPO_BRANCH": {
-      "description": "Repo Branch, you want to deploy with your REPO_URL."
+      "description": "Repo Branch, you want to deploy with your REPO_URL.",
+      "value": ""
     },
     "START_CMD": {
-      "description": "Trigger Command for your Bot to Run."
+      "description": "Trigger Command for your Bot to Run.",
+      "value": ""
     }
-  }
+},
+"buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ]
 }
